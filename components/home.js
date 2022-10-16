@@ -5,7 +5,7 @@ export default function Home({navigation, route}) {
   return (
     <View style={styles.container}>
       <Text>Home Screen</Text>
-      <Text>This is {route.params.username}'s profile</Text>
+      <Text style={{fontFamily:'Poppins-Regular'}}>This is {route.params.username}'s profile</Text>
     </View>
   );
 }
