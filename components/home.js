@@ -1,20 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { BottomNavigation } from 'react-native-paper';
+import { useState } from 'react';
+import Producers from './producers';
+import Consumers from './consumers';
+import Delivery from './delivery';
 
 export default function Home({navigation, route}) {
-  return (
-    <View style={styles.container}>
-      <Text>Home Screen</Text>
-      <Text style={{fontFamily:'Poppins-Regular'}}>This is {route.params.username}'s profile</Text>
-    </View>
-  );
-}
+    if(route.params.role=='PRODUCER'){
+        return ( <Producers/>)
+    }else if(route.params.role == "CONSUMER"){
+        return ( <Consumers/>)
+    }else{
+        return (<Delivery/>)
+    }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+}

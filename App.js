@@ -18,6 +18,7 @@ const App = () => {
     'Poppins-Black': require('./assets/fonts/Poppins-Black.ttf'),
     'Poppins-Thin': require('./assets/fonts/Poppins-Thin.ttf'),
     'Poppins-Regular': require('./assets/fonts/Poppins-Regular.ttf'),
+    'Poppins-Medium': require('./assets/fonts/Poppins-Medium.ttf'),
   });
   if(fontsLoaded){
   return (
